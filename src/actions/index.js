@@ -5,7 +5,8 @@ export const getTrending = () => {
 		const response = await tmdb.get('/3/discover/movie');
 		dispatch({
 			type: 'GET_TRENDING',
-			payload: response['total_results']
+			payload: response.data.results
 		});
+		
 	};
 };

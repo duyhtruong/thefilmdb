@@ -1,6 +1,6 @@
 import React from 'react';
 import Trending from './Trending';
-import Header from './Header';
+
 import Search from './Search';
 import Detail from './Detail';
 import Favorites from './Favorites';
