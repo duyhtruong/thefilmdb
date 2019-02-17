@@ -1,4 +1,5 @@
 import tmdb from '../apis/tmdb';
+import tmdbDetail from '../apis/tmdbDetail';
 
 export const getTrending = () => {
 	return async (dispatch, getState) => {
@@ -8,5 +9,15 @@ export const getTrending = () => {
 			payload: response.data.results
 		});
 		
+	};
+};
+
+export const getDetail = (id) => {
+	return async (dispatch, getState) => {
+		const response = await tmdbDetail.get(`/3/movie/${id}`);
+		dispatch({
+			type: 'GET_DETAIL',
+			payload: response.data
+		});
 	};
 };
