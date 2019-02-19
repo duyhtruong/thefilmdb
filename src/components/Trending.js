@@ -19,6 +19,7 @@ class Trending extends React.Component{
 						<img 
 							className='ui fluid image'
 							src={`${imageBaseURL}${trend.poster_path}`} 
+							alt=''
 						/>
 						</Link>
 					</div>
