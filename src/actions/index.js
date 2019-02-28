@@ -1,5 +1,7 @@
 import tmdb from '../apis/tmdb';
 import tmdbDetail from '../apis/tmdbDetail';
+import tmdbSearch from '../apis/tmdbSearch';
+
 
 export const getTrending = () => {
 	return async (dispatch, getState) => {
@@ -21,3 +23,14 @@ export const getDetail = (id) => {
 		});
 	};
 };
+
+export const getSearch = (term) => {
+	return async (dispatch, getState) => {
+		const response = await tmdbSearch.get(`/3/search/movie?query=${term}`);
+		dispatch({
+			type:'GET_SEARCH',
+			payload: response.data.results
+		});
+		
+	}
+}

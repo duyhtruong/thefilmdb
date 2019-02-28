@@ -1,7 +1,20 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import SearchBar from './SearchBar';
+import { connect } from 'react-redux';
+import { getSearch } from '../actions';
+import history from '../history';
 
 class Header extends React.Component {
+	
+	onSubmit = (formValues) => {
+	
+		history.push(`/search/${formValues.search}`)
+		this.props.getSearch(formValues.search)
+
+
+	}
+
 	render(){
 		return(
 			<div className='ui segment center aligned container'>
@@ -18,13 +31,10 @@ class Header extends React.Component {
 						</Link>
 					</div>
 				</div>
-				<div className='ui action input fluid'>
-					<input type='text' placeholder='Search...'/>
-					<button className='ui button'>Search</button>
-				</div>
+				<SearchBar onSubmit={this.onSubmit} />
 			</div>
 		);
 	}
 };
 
-export default Header;
+export default connect(null, { getSearch })(Header);

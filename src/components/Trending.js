@@ -25,14 +25,12 @@ class Trending extends React.Component{
 					</div>
 					);
 			});
-	
 	}
 
 
 	render(){
 		return(
 			<div>
-			Trending
 			<Header />
 			
 				<div className='ui stackable three column grid'>
