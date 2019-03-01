@@ -11,9 +11,6 @@ class Search extends React.Component{
 		this.props.getSearch(this.props.match.params.title)
 	}
 
-
-
-
 	renderList(){
 			var imageBaseURL = "http://image.tmdb.org/t/p/w342";
 		
@@ -31,8 +28,6 @@ class Search extends React.Component{
 						);
 				});
 		}
-
-
 
 	render(){
 		return (

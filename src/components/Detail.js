@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './Header';
 import { connect } from 'react-redux';
 import { getDetail } from '../actions';
+import { addFavorite } from '../actions';
 import './index.css';
 import { Rating } from 'semantic-ui-react';
 
@@ -9,6 +10,10 @@ class Detail extends React.Component{
 	componentDidMount(){
 		this.props.getDetail(this.props.match.params.id)
 	}
+
+
+
+
 
 	genreRender(){
 		if(!this.props.detail.detailsResult){
@@ -31,9 +36,11 @@ class Detail extends React.Component{
 		return genreRenders
 		
 		}
-
-	
 	}
+
+
+
+
 
 	helperRender(){
 		const apiKey = '?api_key=23df4f4dded45215846668f78df6e8e8';
@@ -81,6 +88,11 @@ class Detail extends React.Component{
 					<div className='ui big black labels'>
 						{this.genreRender()}
 					</div>
+					
+					<br/>
+					<br/>
+					{this.addFavoritesRender()}
+					
 				
 				</div>
 				</div>
@@ -88,6 +100,23 @@ class Detail extends React.Component{
 			)
 		}
 	}
+
+	handleClick = () => {
+		console.log(this.props.detail.detailsResult.original_title);
+		this.props.addFavorite(this.props.detail.detailsResult);
+	}
+
+	addFavoritesRender(){
+		return (
+			<div>
+				<button onClick={this.handleClick} className='huge ui labeled icon red  button'>
+				<i className='heart icon'></i>
+				Add this movie to your Favorites
+				</button>
+			</div>
+		)
+	}
+
 
 	render(){
 		return(
@@ -108,4 +137,4 @@ const mapStateToProps = (state) => {
 	}
 }
 
-export default connect(mapStateToProps, { getDetail })(Detail);
+export default connect(mapStateToProps, { getDetail, addFavorite })(Detail);

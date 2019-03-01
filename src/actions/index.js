@@ -34,3 +34,10 @@ export const getSearch = (term) => {
 		
 	}
 }
+
+export const addFavorite = (info) => {
+	return {
+		type: 'ADD_FAVORITE',
+		payload: info.title
+	};
+};
