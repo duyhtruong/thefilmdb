@@ -38,6 +38,21 @@ export const getSearch = (term) => {
 export const addFavorite = (info) => {
 	return {
 		type: 'ADD_FAVORITE',
-		payload: info.title
+		payload: {
+			title: info.title,
+			overview: info.overview,
+			poster: info.poster_path,
+			rating: info.vote_average,
+			tagline: info.tagline,
+			genres:info.genres
+		}
 	};
 };
+
+export const deleteFavorite = (title) => {
+	return{
+		type: 'DELETE_FAVORITE',
+		payload: title 
+	}
+}
+

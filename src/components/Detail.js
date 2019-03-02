@@ -102,7 +102,7 @@ class Detail extends React.Component{
 	}
 
 	handleClick = () => {
-		console.log(this.props.detail.detailsResult.original_title);
+		
 		this.props.addFavorite(this.props.detail.detailsResult);
 	}
 
