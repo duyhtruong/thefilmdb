@@ -2,11 +2,12 @@ import React from 'react';
 import Header from './Header';
 import { connect } from 'react-redux';
 import { Rating } from 'semantic-ui-react';
-import { deleteFavorite } from '../actions';
+import DeleteFavorites from './DeleteFavorites';
+import EditForm from './EditForm';
+import ShowEdit from './ShowEdit'
 
 class Favorites extends React.Component{
-	
-	
+
 		
 
 
@@ -15,6 +16,7 @@ class Favorites extends React.Component{
 		return (
 
 			this.props.favoritesList.map((favorite) =>{
+			
 			return(
 				<div key={favorite.title} className='item'>
 					<h1 className='ui header'>{favorite.title}
@@ -26,7 +28,8 @@ class Favorites extends React.Component{
 						src={`${imageBaseURL}${favorite.poster}`}
 						className='ui left floated image'
 						alt=''
-					/>
+					/>				
+					
 					
 					<Rating 
 						icon='star' 
@@ -38,8 +41,7 @@ class Favorites extends React.Component{
 
 					{favorite.overview}
 					<div className="ui hidden divider"></div>
-					
-					
+				
 
 					<div className='ui big black labels'>
 					{favorite.genres.map(genre => {
@@ -50,11 +52,20 @@ class Favorites extends React.Component{
 							);
 					})}
 					</div>
+			
+				
+						Notes:
+					
+					
+				
+				
 
-					<button
-						className='huge ui red  button'>
-						Delete 
-					</button>
+
+					<div className='ui hidden divider'></div>
+
+					<DeleteFavorites title={favorite.title}/>
+					<ShowEdit title={favorite.title} />
+	
 
 
 					
@@ -73,6 +84,8 @@ class Favorites extends React.Component{
 				<Header/>
 				<div className='ui relaxed divided list'>
 					{this.renderHelper()}
+					
+					
 				</div>
 			</div>
 			);
@@ -86,4 +99,4 @@ class Favorites extends React.Component{
 	}
 
 
-export default connect(mapStateToProps, { deleteFavorite })(Favorites);
+export default connect(mapStateToProps)(Favorites);

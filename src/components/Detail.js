@@ -3,6 +3,7 @@ import Header from './Header';
 import { connect } from 'react-redux';
 import { getDetail } from '../actions';
 import { addFavorite } from '../actions';
+
 import './index.css';
 import { Rating } from 'semantic-ui-react';
 
@@ -92,6 +93,7 @@ class Detail extends React.Component{
 					<br/>
 					<br/>
 					{this.addFavoritesRender()}
+			
 					
 				
 				</div>
@@ -105,6 +107,8 @@ class Detail extends React.Component{
 		
 		this.props.addFavorite(this.props.detail.detailsResult);
 	}
+
+
 
 	addFavoritesRender(){
 		return (

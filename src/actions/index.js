@@ -44,7 +44,8 @@ export const addFavorite = (info) => {
 			poster: info.poster_path,
 			rating: info.vote_average,
 			tagline: info.tagline,
-			genres:info.genres
+			genres:info.genres,
+			notes:''
 		}
 	};
 };
@@ -55,4 +56,18 @@ export const deleteFavorite = (title) => {
 		payload: title 
 	}
 }
+
+export const submitEdit = (title, edit) => {
+	return{
+		type: 'SUBMIT_EDIT',
+		payload: {
+			title: title,
+			edit:edit
+		}
+	}
+}
+
+
+
+
 

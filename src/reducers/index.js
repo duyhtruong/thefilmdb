@@ -2,6 +2,7 @@ import { combineReducers } from 'redux';
 import trendingReducer from './trendingReducer';
 import detailReducer from './detailReducer';
 import searchReducer from './searchReducer';
+import submitEditReducer from './submitEditReducer';
 
 import addFavoriteReducer from './addFavoriteReducer';
 
@@ -12,5 +13,6 @@ export default combineReducers({
 	detail : detailReducer,
 	search : searchReducer,
 	addFavorite : addFavoriteReducer,
-	form: formReducer
+	form: formReducer,
+	edit: submitEditReducer
 });
