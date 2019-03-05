@@ -9,7 +9,7 @@ class DeleteFavorites extends React.Component{
 			<div>
 					<button
 						onClick={() => this.props.deleteFavorite(this.props.title)}
-						className='ui red  button'>
+						className='ui small red button'>
 						Remove from Favorites 
 					</button>
 				</div>

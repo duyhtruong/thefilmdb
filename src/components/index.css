@@ -6,3 +6,19 @@
 .headerFont {
 	font-size: 3em;
 }
+
+.sideComponent{
+	display: flex;
+	flex-direction:row;
+	padding-bottom: 50px;
+}
+
+.rightFavorite{
+	padding-left: 50px;
+	font-size: 1.5em;
+}
+
+.editChoice{
+	display: flex;
+	flex-direction: row;
+}

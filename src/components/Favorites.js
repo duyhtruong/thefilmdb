@@ -5,6 +5,7 @@ import { Rating } from 'semantic-ui-react';
 import DeleteFavorites from './DeleteFavorites';
 import EditForm from './EditForm';
 import ShowEdit from './ShowEdit'
+import './index.css'
 
 class Favorites extends React.Component{
 
@@ -18,58 +19,55 @@ class Favorites extends React.Component{
 			this.props.favoritesList.map((favorite) =>{
 			
 			return(
-				<div key={favorite.title} className='item'>
-					<h1 className='ui header'>{favorite.title}
-					<div className='sub header'>{favorite.tagline}</div>
-						</h1>
-						
-					<br/>
-					<img 
-						src={`${imageBaseURL}${favorite.poster}`}
-						className='ui left floated image'
-						alt=''
-					/>				
-					
-					
-					<Rating 
-						icon='star' 
-						defaultRating={favorite.rating} 
-						maxRating={10} 
-						size='huge'
-						/>
-					<div className="ui hidden divider"></div>
 
-					{favorite.overview}
-					<div className="ui hidden divider"></div>
 				
-
-					<div className='ui big black labels'>
-					{favorite.genres.map(genre => {
-						return (
-							<div key={genre.name} className='ui label'>
-								{genre.name}
-							</div>
-							);
-					})}
+				<div key={favorite.title} className='sideComponent'>
+					
+					<div>
+							<img 
+								src={`${imageBaseURL}${favorite.poster}`}
+								className=''
+								alt=''
+							/>	
+								<DeleteFavorites title={favorite.title}/>
 					</div>
-			
-				
-						Notes:
-					
-					
-				
-				
 
+					<div className='rightFavorite'>
+							<h1 className=''>{favorite.title}
+								<div className=''>{favorite.tagline}</div>
+							</h1>
+								
+							<Rating 
+								icon='star' 
+								defaultRating={favorite.rating} 
+								maxRating={10} 
+								size='huge'
+								/>
+							<div className="ui hidden divider"></div>
+							{favorite.overview}
+							<div className="ui hidden divider"></div>
 
-					<div className='ui hidden divider'></div>
+							<strong>Notes:</strong>
+							<div>
+							{this.props.editText[favorite.title]}
+							</div>
+							
+							<div className='ui hidden divider'></div>
 
-					<DeleteFavorites title={favorite.title}/>
-					<ShowEdit title={favorite.title} />
-	
+								<ShowEdit title={favorite.title} />
+							
 
+							<div className='ui medium black labels'>
+							{favorite.genres.map(genre => {
+								return (
+									<div key={genre.name} className='ui label'>
+										{genre.name}
+									</div>
+									);
+							})}
+							</div>								
+					</div>
 
-					
-				
 				</div>
 			);
 		})
@@ -82,7 +80,7 @@ class Favorites extends React.Component{
 		return(
 			<div>
 				<Header/>
-				<div className='ui relaxed divided list'>
+				<div className='ui'>
 					{this.renderHelper()}
 					
 					
@@ -94,7 +92,8 @@ class Favorites extends React.Component{
 
 	const mapStateToProps = (state) => {
 		return{
-			favoritesList: state.addFavorite
+			favoritesList: state.addFavorite,
+			editText: state.edit
 		};
 	}
 

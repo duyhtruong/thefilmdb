@@ -1,5 +1,6 @@
 import React from 'react';
 import { Field, reduxForm } from 'redux-form';
+import { connect } from 'react-redux';
 
 class EditForm extends React.Component{
 	
@@ -14,6 +15,7 @@ class EditForm extends React.Component{
 							name={`${this.props.title}`}
 							component='textarea'
 							type='text'
+							placeholder={`${this.props.editText[this.props.title]}`}
 							
 						/> 
 						<button className='ui blue button'>Submit</button>
@@ -33,6 +35,14 @@ class EditForm extends React.Component{
 		);
 	}
 }
+
+const mapStateToProp = (state) => {
+	return {
+		editText: state.edit
+	}
+}
+
+EditForm = connect (mapStateToProp)(EditForm);
 
 export default reduxForm({
 	form:'editForm'

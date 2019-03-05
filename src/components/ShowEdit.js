@@ -2,6 +2,7 @@ import React from 'react';
 import EditForm from './EditForm';
 import { connect } from 'react-redux';
 import { submitEdit } from '../actions';
+import './index.css'
 
 class ShowEdit extends React.Component{
 
@@ -12,6 +13,7 @@ class ShowEdit extends React.Component{
 	onEditSubmit = (formValues) => {
 		console.log(formValues[this.props.title])
 		this.props.submitEdit(this.props.title, formValues[this.props.title])
+		this.handleEditClick();
 	}
 
 
@@ -28,29 +30,22 @@ class ShowEdit extends React.Component{
 		console.log(this.state.toggleEdit)
 	}
 
-	renderEditButton(){
+	renderWhenTrue(){
 		return(
 				<button 
 				className='ui yellow button'
 				onClick={() => this.handleEditClick()}>
-					Edit
+					Edit Notes
 				</button>
 		)
 	}
 
-	renderStateTrue(){
-		return(
-			<div>
-			{this.props.editText[this.props.title]}
-			</div>
-		)
-	}
+
 
 	renderWhenFalse(props){
 		return(
-			<div>
+			<div className='editChoice'>
 			<EditForm title={this.props.title} onEditSubmit={this.onEditSubmit} />
-			<button onClick={() => this.handleEditClick()} className='ui blue button'>Cancel</button>
 			</div>
 		);
 	}
@@ -69,8 +64,8 @@ class ShowEdit extends React.Component{
 		else{
 			return(
 				<div>
-				{this.renderEditButton()}
-				{this.renderStateTrue()}
+				{this.renderWhenTrue()}
+			
 				</div>
 			);
 		}
