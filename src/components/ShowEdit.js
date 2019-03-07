@@ -11,7 +11,7 @@ class ShowEdit extends React.Component{
 	}
 	
 	onEditSubmit = (formValues) => {
-		console.log(formValues[this.props.title])
+		
 		this.props.submitEdit(this.props.title, formValues[this.props.title])
 		this.handleEditClick();
 	}
@@ -27,7 +27,7 @@ class ShowEdit extends React.Component{
 				toggleEdit: true
 			})
 		}
-		console.log(this.state.toggleEdit)
+	
 	}
 
 	renderWhenTrue(){
@@ -56,7 +56,7 @@ class ShowEdit extends React.Component{
 			return(
 				<div>
 					{this.renderWhenFalse()}
-					{console.log('it worked')}
+				
 				</div>
 			);
 		}

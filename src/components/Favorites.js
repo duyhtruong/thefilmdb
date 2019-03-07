@@ -3,7 +3,7 @@ import Header from './Header';
 import { connect } from 'react-redux';
 import { Rating } from 'semantic-ui-react';
 import DeleteFavorites from './DeleteFavorites';
-import EditForm from './EditForm';
+
 import ShowEdit from './ShowEdit'
 import './index.css'
 
@@ -77,6 +77,45 @@ class Favorites extends React.Component{
 
 
 	render(){
+		if(this.props.favoritesList.length === 0){
+			return(
+				
+				<div>
+					<Header/>
+<div className="ui segment">
+  <div className="ui active dimmer">
+    <div className="ui massive indeterminate text loader">Add a movie to your Favorites</div>
+  </div>
+  <p className='ui hidden divider'></p>
+    <p className='ui hidden divider'></p>
+      <p className='ui hidden divider'></p>
+        <p className='ui hidden divider'></p>
+          <p className='ui hidden divider'></p>
+            <p className='ui hidden divider'></p>
+  <p className='ui hidden divider'></p>
+    <p className='ui hidden divider'></p>
+      <p className='ui hidden divider'></p>
+        <p className='ui hidden divider'></p>
+          <p className='ui hidden divider'></p>
+            <p className='ui hidden divider'></p>
+              <p className='ui hidden divider'></p>
+    <p className='ui hidden divider'></p>
+      <p className='ui hidden divider'></p>
+        <p className='ui hidden divider'></p>
+          <p className='ui hidden divider'></p>
+            <p className='ui hidden divider'></p>
+              <p className='ui hidden divider'></p>
+    <p className='ui hidden divider'></p>
+      <p className='ui hidden divider'></p>
+        <p className='ui hidden divider'></p>
+          <p className='ui hidden divider'></p>
+            <p className='ui hidden divider'></p>
+</div>
+				</div>
+			);
+		}
+		else{
+
 		return(
 			<div>
 				<Header/>
@@ -87,6 +126,7 @@ class Favorites extends React.Component{
 				</div>
 			</div>
 			);
+		}
 	}
 }
 

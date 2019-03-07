@@ -4,6 +4,8 @@ import SearchBar from './SearchBar';
 import { connect } from 'react-redux';
 import { getSearch } from '../actions';
 import history from '../history';
+import './index.css';
+
 
 class Header extends React.Component {
 	
@@ -15,22 +17,50 @@ class Header extends React.Component {
 
 	}
 
+
+
+
 	render(){
 		return(
-			<div className='ui segment center aligned container'>
-				<h1>Movies</h1>
-				<div className='ui horizontal list'>
+			<div className='ui blue inverted tertiary center aligned segment '>
+				<div className="ui hidden divider"></div>
+			
+					<Link to='/'>
+						<div>
+							<img 
+								src={require('../filmdblogo2.png')}
+								alt='' />
+						</div>
+					</Link>
+
+
+<div className="ui hidden divider"></div>
+
+				<div className='ui horizontal inverted list '>
+					
 					<div className='item'>
-						<Link to='/'>
-						<h1 className='ui sub header'>Trending</h1>
-						</Link>
+						<i className="large chart line icon"></i>
+						<div className='top aligned content'>
+							<Link to='/'>
+							<h1>Trending</h1>
+							</Link>
+						</div>
 					</div>
-					<div className='item'>
-						<Link to='/favorites'>
-						<h1 className='ui sub header'>Favorites</h1>
-						</Link>
+
+					<div className='item '>
+						<i className="large heart icon"></i>
+						<div className='top aligned content'>
+							<Link to='/favorites'>
+							<h1>Favorites</h1>
+							</Link>
+						</div>
 					</div>
+
+		
 				</div>
+
+
+
 				<SearchBar onSubmit={this.onSubmit} />
 			</div>
 		);
