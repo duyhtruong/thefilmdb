@@ -25,7 +25,7 @@ class Header extends React.Component {
 			<div className='ui blue inverted tertiary center aligned segment '>
 				<div className="ui hidden divider"></div>
 			
-					<Link to='/'>
+					<Link to='/thefilmdb/'>
 						<div>
 							<img 
 								src={require('../filmdblogo2.png')}
@@ -41,7 +41,7 @@ class Header extends React.Component {
 					<div className='item'>
 						<i className="large chart line icon"></i>
 						<div className='top aligned content'>
-							<Link to='/'>
+							<Link to='/thefilmdb/'>
 							<h1>Trending</h1>
 							</Link>
 						</div>

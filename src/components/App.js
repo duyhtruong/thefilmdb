@@ -16,7 +16,7 @@ const App = () => {
 			<Router history={history}>
 				<div>
 					<Switch>
-						<Route path='/' exact component={Trending} />
+						<Route path='/thefilmdb/' exact component={Trending} />
 						<Route path ='/favorites' exact component={Favorites} />
 						<Route path ='/search/:title' exact component={Search} />
 						<Route path ='/movie/:id' exact component={Detail} />
