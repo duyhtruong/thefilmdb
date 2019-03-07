@@ -1,0 +1,14 @@
+{
+  "main.css": "/thefilmdb/static/css/main.477e55ba.chunk.css",
+  "main.js": "/thefilmdb/static/js/main.e0231ab7.chunk.js",
+  "main.js.map": "/thefilmdb/static/js/main.e0231ab7.chunk.js.map",
+  "static/js/1.3d90eec5.chunk.js": "/thefilmdb/static/js/1.3d90eec5.chunk.js",
+  "static/js/1.3d90eec5.chunk.js.map": "/thefilmdb/static/js/1.3d90eec5.chunk.js.map",
+  "runtime~main.js": "/thefilmdb/static/js/runtime~main.56601dd9.js",
+  "runtime~main.js.map": "/thefilmdb/static/js/runtime~main.56601dd9.js.map",
+  "static/media/filmdblogo2.png": "/thefilmdb/static/media/filmdblogo2.0c3a8088.png",
+  "static/css/main.477e55ba.chunk.css.map": "/thefilmdb/static/css/main.477e55ba.chunk.css.map",
+  "index.html": "/thefilmdb/index.html",
+  "precache-manifest.b003076d585e5af2e1fdd58160a99537.js": "/thefilmdb/precache-manifest.b003076d585e5af2e1fdd58160a99537.js",
+  "service-worker.js": "/thefilmdb/service-worker.js"
+}
