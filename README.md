@@ -14,9 +14,9 @@ The web application is built using React.js with state management handled by Red
 </br>
 
 **To use**:
+ 
+ </br> 
   
-  </br>
-  </br>
   - Head over to https://github.com/duyhtruong/thefilmdb/. 
   - The landing page shows a list of current up-to-date trending movies.
   - To learn more about each movie, click on the movie poster.
