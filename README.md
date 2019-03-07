@@ -1,9 +1,11 @@
 TheFilmDB is a movie database web application where users can learn about movies they're interested in, and see what movies are trending today. The web app features basic CRUD functionality where users can: 
 </br>
+</br>
   -add movies to a 'favorites' page
   -read and learn about each item in the favorites list by clicking on the movie poster
   -update notes for each movie in the favorites list
   -delete movies from the list
+</br>
 </br>
 The web application is built using React.js with state management handled by Redux. Information about trending movies and movie details are fetched from themovieDB API using Axios. All forms used in this web app are handled using Redux-Form. Website navigation is handled using React-Router. 
 
