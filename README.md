@@ -2,7 +2,7 @@
 <p align='center'><img src='./assets/mockup_film.png' width='500'></p>
 <h1 align='center'>TheFilmDB</h1>
 
-<p align='center'>[Live Demo](http://bit.ly/2E3I4iR)</p>
+<p align='center'>Live Demo: (https://duyhtruong.github.io/thefilmdb)</p>
 </br>
 </br>
 <p align='center'><img src='./assets/trending_film.png' width='500'></p>
