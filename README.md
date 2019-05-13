@@ -1,4 +1,11 @@
-## TheFilmDB
+
+<p align='center'><img src='./assets/mockup_film.png' width='500'></p>
+<h1 align='center'>TheFilmDB</h1>
+
+<p align='center'>[Live Demo](http://bit.ly/2E3I4iR)</p>
+</br>
+</br>
+<p align='center'><img src='./assets/trending_film.png' width='500'></p>
 
 TheFilmDB is a movie database web application where users can learn about movies they're interested in, and see what movies are trending today. The web app features basic CRUD functionality where users can: 
 </br>
@@ -9,6 +16,10 @@ TheFilmDB is a movie database web application where users can learn about movies
 - delete movies from the list</br>
 </br>
 </br>
+
+<p align='center'><img src='./assets/details_film.png' width='500'></p>
+<p align='center'><img src='./assets/favorites_film.png' width='500'></p>
+
 The web application is built using React.js with state management handled by Redux. Information about trending movies and movie details are fetched from themovieDB API using Axios. All forms used in this web app are handled using Redux-Form. Website navigation is handled using React-Router. 
 </br>
 </br>
@@ -17,7 +28,7 @@ The web application is built using React.js with state management handled by Red
  
  </br> 
   
-  - Head over to https://github.com/duyhtruong/thefilmdb/. 
+  - Head over to https://duyhtruong.github.io/thefilmdb. 
   - The landing page shows a list of current up-to-date trending movies.
   - To learn more about each movie, click on the movie poster.
   - To add a movie to your favorites, in the detail's page of the movie, click 'add to favorites'.
